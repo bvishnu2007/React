@@ -42,4 +42,4 @@ let userage=20;
     </>
   );
 }
-export default app;
+export default app
