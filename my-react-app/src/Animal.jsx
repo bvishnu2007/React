@@ -1,28 +1,77 @@
-import App from "./App.jsx"
-function Animal(){
+function Hello()
+{
     return (
-        <>
-        <h1>Animals</h1>
-        <div style={{ display:"flex",gap:"20px"}}>
-        <p style={{textAlign:"justify"}}>
+            <p style={{textAlign:"left"}}>Hello</p>
+        );
+}
 
-        Animals first appeared in the fossil record in the late Cryogenian period 
-            and diversified in the subsequent Ediacaran period in what is known as the Avalon explosion.
-             Nearly all modern animal phyla first appeared in the fossil record as 
-             marine species during the Cambrian explosion,
-             which began around 539 million years ago (Mya),
-            and most classes during the Ordovician radiation 485.4 Mya.
-            Common to all living animals, 6,331 groups of genes have been identified
-            that may have arisen from a single common ancestor that lived about 
-            650 Mya during the Cryogenian period.
-            </p>
-            <img  style={{width:280}}
-            src="https://i.pinimg.com/736x/de/b6/0d/deb60d1ebb6559360cdb447daf0461e2.jpg" alt="animal" />
-            </div>
-            <App></App>
-    
-
-        </>
+function Galaxy(props)
+{
+    return (
+        < div style={{
+            textAlign:"left"
+        }}>
+        <h4>Name:{props.name}</h4>
+        <h4>Process:{props.process}</h4>
+        </div>
     );
 }
-export default Animal;
+function Star()
+{
+    return (
+        <Galaxy name="Sun" 
+        process="Nuclear Fission and Fusion"></Galaxy>
+    );
+}
+function Summary(props)
+{
+    return (
+        <p style={{textAlign:"justify"}}>
+            Results-driven and highly motivated professional 
+            seeking a {props.job} position in a leading
+            {props.company}. Possess strong knowledge and hands-on
+            experience in {props.skill1}, {props.skill2}, and {props.skill3}.
+            Adept at problem-solving, teamwork, and delivering
+            high-quality technical solutions. Passionate about 
+            learning new technologies and contributing to 
+            organizational growth through innovation and continuous 
+            improvement. 
+            Eager to leverage technical expertise and analytical skills 
+            to achieve business objectives and drive success in a 
+            dynamic corporate environment.
+        </p>
+    );
+}
+function Animator (){
+    return (
+        <Summary
+        job="Animator"
+        company="Garena"
+        skill1="Unreal Engine"
+        skill2="Blender"
+        skill3="Graphic Design"
+        ></Summary>
+    );
+}
+function animal() {
+    return (
+       <>
+       <h1>Animals</h1>
+       <div style={{display:"flex",gap:"20px"}}>
+        <p
+        style={{textAlign:"justify"}}
+        >
+            In 1924, Hidesaburō Ueno, an agricultural science professor at Tokyo Imperial University, adopted a golden-brown Akita puppy and named him Hachi. The two formed an incredibly tight bond. Every morning, Hachikō would walk with Professor Ueno to the Shibuya train station. When the workday ended, the devoted dog would return to the station right on time to greet his master as he got off the train.
+        </p>
+        <img 
+        style={{width:100}}
+        src="https://i.pinimg.com/736x/de/b6/0d/deb60d1ebb6559360cdb447daf0461e2.jpg" alt="Dog" />
+       </div>
+       <Hello></Hello>
+       <Star></Star>
+       <Animator></Animator>
+     </>  
+       
+    );
+}
+export default animal;
